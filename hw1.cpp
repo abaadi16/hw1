@@ -1,6 +1,6 @@
 //modified by: Abdulelah Aldeshash
 //date: May/30/2017
-//purpose: First lab
+//purpose: hw1
 //
 //cs3350 Spring 2017 Lab-1
 //author: Gordon Griesel
