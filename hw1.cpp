@@ -41,6 +41,7 @@
 #include <X11/keysym.h>
 #include <GL/glx.h>
 //#include <fonts.h>
+#include "str.h"
 
 
 #define WINDOW_WIDTH  800
@@ -54,33 +55,6 @@ Display *dpy;
 Window win;
 GLXContext glc;
 
-//Structures
-
-struct Vec {
-	float x, y, z;
-};
-
-struct Shape {
-	float width, height;
-	float radius;
-	Vec center;
-};
-
-struct Particle {
-	Shape s;
-	Vec velocity;
-};
-
-struct Game {
-	Shape box1, box2, box3, box4, box5;
-	//Arrays of particles
-
-	Particle particle[MAX_PARTICLES];
-	int n;
-	Game() {
-		n = 0;
-	}
-};
 
 //Function prototypes
 void initXWindows(void);
@@ -205,8 +179,11 @@ void init_opengl(void)
 	glClearColor(0.1, 0.1, 0.1, 1.0);
 	//initialize_fonts();
 }
-#define rnd() (float)rand() / (float)RAND_MAX
-void makeParticle(Game *game, int x, int y)
+
+
+//#define rnd() (float)rand() / (float)RAND_MAX
+extern void makeParticle(Game *game, int x, int y);
+/*
 {
 	if (game->n >= MAX_PARTICLES)
 		return;
@@ -219,6 +196,7 @@ void makeParticle(Game *game, int x, int y)
 	p->velocity.x = rnd() *2.0 - 1.0;
 	game->n++;
 }
+*/
 
 void check_mouse(XEvent *e, Game *game)
 {
