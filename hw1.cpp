@@ -1,5 +1,5 @@
 //modified by: Abdulelah Aldeshash
-//date: May/30/2017
+//date: June/11/2017
 //purpose: hw1
 //
 //cs3350 Spring 2017 Lab-1
