@@ -4,7 +4,7 @@
 all: hw1
 
 hw1: hw1.cpp mParticle.cpp
-	g++ hw1.cpp mParticle.cpp str.h -Wall -ohw1 -lX11 -lGL -lGLU -lm
+	g++ hw1.cpp mParticle.cpp libggfonts.a str.h fonts.h -Wall -ohw1 -lX11 -lGL -lGLU -lm -no-pie
 
 clean:
 	rm -f hw1

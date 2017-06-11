@@ -20,7 +20,8 @@ struct Particle {
 };
 
 struct Game {
-        Shape box1, box2, box3, box4, box5;
+        Shape box1[5];
+		Shape box2, box3, box4, box5;
         //Arrays of particles
 
         Particle particle[MAX_PARTICLES];
