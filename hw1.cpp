@@ -241,8 +241,8 @@ void movement(Game *game)
 
 		Shape *s1;	
 		//check for collision with shapes...
-		for (int i=0; i<5; i++) {
-			s1= &game->box1[i];
+		for (int j=0; j<5; j++) {
+			s1= &game->box1[j];
 			if (
 					p->s.center.y < s1->center.y + s1->height &&
 					p->s.center.y > s1->center.y - s1->height &&
@@ -261,7 +261,8 @@ void movement(Game *game)
 			//std::cout << "off screen" << std::endl;
 			game->particle[i] = game->particle[game->n-1];
 			game->n --;
-		}	
+		}
+
 	}
 }
 
